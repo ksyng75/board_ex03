@@ -3,8 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="me.ng.mapper.BlogMapper">
+<mapper namespace="me.ng.mapper.BoardMapper">
   <select id="getList" resultType="me.ng.model.Board">
-    select * from board_ex;
+    select * from board_tbl
   </select>
 </mapper>
