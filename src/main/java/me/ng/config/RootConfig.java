@@ -1,9 +1,25 @@
 package me.ng.config;
 
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
 public class RootConfig {
+	
+	@Bean
+	public DataSource dataSource() {
+		HikariConfig config = new HikariDataSource();
+		config.setDriverClassName("com.mysql.cj.jdbc.Driver");
+		config.setJdbcUrl("jdbc:mysql://localhost/board.ex");
+		config.setUsername("root");
+		config.setPassword("1234");
+		HikariDataSource dataSource = new HikariDataSource(config);
+		return dataSource;
+	}
 
 }

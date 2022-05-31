@@ -1,10 +1,6 @@
 package me.ng.config;
 
-import java.rmi.registry.Registry;
-import java.util.List;
-
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
